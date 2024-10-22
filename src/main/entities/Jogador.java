@@ -1,4 +1,4 @@
-package entities;
+package main.entities;
 
 public class Jogador {
     // RF01 - Cada jogador tem um símbolo ('X' ou 'O')

@@ -1,4 +1,4 @@
-package entities;
+package main.entities;
 
 public class Tabuleiro {
     // RT01 - Representa uma célula vazia no tabuleiro, Matriz 3x3 representando o tabuleiro
