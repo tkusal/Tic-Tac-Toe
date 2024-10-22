@@ -3,7 +3,7 @@ package entities;
 public class Tabuleiro {
     // RT01 - Representa uma célula vazia no tabuleiro, Matriz 3x3 representando o tabuleiro
     private static final char VAZIO = '-';
-    private char[][] tabuleiro = new char[3][3]; // RT01 -
+    private char[][] tabuleiro = new char[3][3];
 
     // RT01 - Inicializa o tabuleiro com células vazias e preenche o tabuleiro com o caractere vazio
     public void inicializar() {
@@ -16,7 +16,7 @@ public class Tabuleiro {
 
     // RF03 - Exibe o tabuleiro no console com os números de linhas e colunas
     public void exibir() {
-        System.out.println("  0 1 2");
+        System.out.println(" 0 1 2");
         for (int i = 0; i < 3; i++) {
             System.out.print(i + " ");
             for (int j = 0; j < 3; j++) {

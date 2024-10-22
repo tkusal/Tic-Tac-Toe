@@ -1,6 +1,7 @@
 import entities.Jogador;
 import entities.Tabuleiro;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class JogoDaVelha {
@@ -16,12 +17,32 @@ public class JogoDaVelha {
         tabuleiro.inicializar();
         tabuleiro.exibir();
 
+        int linha;
+        int coluna;
+
         while (jogando) {
             // RF03 e RT02 - Coleta a entrada do jogador (linha e coluna)
-            System.out.println("\nJogador " + jogadorAtual.getNum() + ", Informe a linha que deseja fazer sua próxima jogada");
-            int linha = sc.nextInt();
-            System.out.println("Jogador " + jogadorAtual.getNum() + ", Informe a coluna que deseja fazer sua próxima jogada");
-            int coluna = sc.nextInt();
+            while (true) {
+                try {
+                    System.out.println("\nJogador " + jogadorAtual.getNum() + ", Informe a linha que deseja fazer sua próxima jogada");
+                    linha = sc.nextInt();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                    sc.next(); // Limpa a entrada inválida
+                }
+            }
+
+            while (true) {
+                try {
+                    System.out.println("Jogador " + jogadorAtual.getNum() + ", Informe a coluna que deseja fazer sua próxima jogada");
+                    coluna = sc.nextInt();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                    sc.next();
+                }
+            }
 
             // RF02 e RT03 - Verifica se a jogada é válida e faz a realiza
             if(tabuleiro.fazerJogada(linha, coluna, jogadorAtual.getSimbolo())) {
