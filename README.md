@@ -1,8 +1,7 @@
 # Tic-Tac-Toe
-Atividade "Material de Avaliação Prática da Aprendizagem" de Programação de Sistemas 1, graduação em Engenharia de Software.
+Criação do Jogo da Velha em Java
 
-## Criação do Jogo da Velha em Java
-###Objetivo:
+### Objetivo:
 Desenvolver uma aplicação Java que implemente o jogo da velha (Tic-Tac-Toe) utilizando apenas a linha de comando. O objetivo é reforçar o entendimento sobre estruturas de dados, controle de fluxo, e manipulação de matrizes, além de praticar a interação com o usuário via console.
 
 ### Instruções:
